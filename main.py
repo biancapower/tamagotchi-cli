@@ -1,10 +1,12 @@
+import random
+
 name = "Nameless"
 age = 0
 
 max_stat = 10
-fullness = 5
-health = 5
-happiness = 5
+fullness = random.randint(1,10) 
+health = random.randint(1,10) 
+happiness = random.randint(1,10) 
 
 running = True
 
@@ -22,8 +24,11 @@ while running:
         happiness += 0.25
     elif command == 'e':
         health += 1
+        happiness += 0.1
+        fullness -= 0.3
     elif command == 'p':
         happiness += 1
+        fullness -= 0.25
     else: # if invalid key pressed, decrease happiness
         happiness -= 1
         
