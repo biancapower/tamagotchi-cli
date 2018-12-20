@@ -13,6 +13,10 @@ running = True
 def print_stats():
     print(f'____________________\nName: {name}\nAge: {age}\nHunger: {round(max_stat - fullness)}\nHealth: {round(health)}\nHappiness: {round(happiness)}\n____________________')
 
+def am_i_dead():
+    if (fullness < 0) or (health < 0) or (happiness < 0):
+        print(f'RIP {name}')
+
 print_stats()
 
 while running:
@@ -33,3 +37,5 @@ while running:
         happiness -= random.randint(0,5)
         
     print_stats()
+
+    am_i_dead()
