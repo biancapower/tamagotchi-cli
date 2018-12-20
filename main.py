@@ -1,0 +1,8 @@
+name = "Nameless"
+age = 0
+
+hunger = 5
+health = 5
+happiness = 5
+
+print(f'____________________\nName: {name}\nAge: {age}\nHunger: {hunger}\nHealth: {health}\nHappiness: {happiness}\n____________________')
