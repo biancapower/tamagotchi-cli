@@ -11,7 +11,7 @@ happiness = random.randint(1,10)
 running = True
 
 def print_stats():
-    print(f'____________________\nName: {name}\nAge: {age}\nHunger: {max_stat - fullness}\nHealth: {health}\nHappiness: {happiness}\n____________________')
+    print(f'____________________\nName: {name}\nAge: {age}\nHunger: {round(max_stat - fullness)}\nHealth: {round(health)}\nHappiness: {round(happiness)}\n____________________')
 
 print_stats()
 
