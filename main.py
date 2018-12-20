@@ -7,7 +7,10 @@ happiness = 5
 
 running = True
 
-print(f'____________________\nName: {name}\nAge: {age}\nHunger: {hunger}\nHealth: {health}\nHappiness: {happiness}\n____________________')
+def print_stats():
+    print(f'____________________\nName: {name}\nAge: {age}\nHunger: {hunger}\nHealth: {health}\nHappiness: {happiness}\n____________________')
+
+print_stats()
 
 while running:
 
@@ -22,5 +25,4 @@ while running:
     else: # if invalid key pressed, decrease happiness
         happiness = happiness - 1
         
-
-    print(f'____________________\nName: {name}\nAge: {age}\nHunger: {hunger}\nHealth: {health}\nHappiness: {happiness}\n____________________')
+    print_stats()
