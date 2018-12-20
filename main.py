@@ -6,3 +6,5 @@ health = 5
 happiness = 5
 
 print(f'____________________\nName: {name}\nAge: {age}\nHunger: {hunger}\nHealth: {health}\nHappiness: {happiness}\n____________________')
+
+command = input('Press (f) to feed, (e) to exercise, or (p) to play ')
