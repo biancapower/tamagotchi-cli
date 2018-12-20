@@ -1,14 +1,15 @@
 name = "Nameless"
 age = 0
 
-hunger = 5
+max_stat = 10
+fullness = 5
 health = 5
 happiness = 5
 
 running = True
 
 def print_stats():
-    print(f'____________________\nName: {name}\nAge: {age}\nHunger: {hunger}\nHealth: {health}\nHappiness: {happiness}\n____________________')
+    print(f'____________________\nName: {name}\nAge: {age}\nHunger: {max_stat - fullness}\nHealth: {health}\nHappiness: {happiness}\n____________________')
 
 print_stats()
 
@@ -17,12 +18,13 @@ while running:
     command = input('Press (f) to feed, (e) to exercise, or (p) to play ')
 
     if command == 'f':
-        hunger = hunger + 1
+        fullness += 1
+        happiness += 0.25
     elif command == 'e':
-        health = health + 1
+        health += 1
     elif command == 'p':
-        happiness = happiness + 1
+        happiness += 1
     else: # if invalid key pressed, decrease happiness
-        happiness = happiness - 1
+        happiness -= 1
         
     print_stats()
