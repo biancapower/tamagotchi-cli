@@ -21,9 +21,13 @@ print_stats()
 
 while running:
 
-    command = input('Press (f) to feed, (e) to exercise, or (p) to play ')
+    command = input('Press (f) to feed, (e) to exercise, (p) to play, or (x) to exit ')
 
-    if command == 'f':
+    if command == 'x':
+        print('\nBye!\n')
+        running = False
+        break
+    elif command == 'f':
         fullness += 1
         happiness += random.randint(0,3)/10
     elif command == 'e':
