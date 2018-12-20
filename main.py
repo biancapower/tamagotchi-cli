@@ -21,15 +21,15 @@ while running:
 
     if command == 'f':
         fullness += 1
-        happiness += 0.25
+        happiness += random.randint(0,3)/10
     elif command == 'e':
         health += 1
-        happiness += 0.1
-        fullness -= 0.3
+        happiness += random.randint(0,20)/100 
+        fullness -= random.randint(0,50)/100 
     elif command == 'p':
         happiness += 1
-        fullness -= 0.25
+        fullness -= random.randint(0,25)/100
     else: # if invalid key pressed, decrease happiness
-        happiness -= 1
+        happiness -= random.randint(0,5)
         
     print_stats()
