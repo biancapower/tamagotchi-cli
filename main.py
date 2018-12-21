@@ -15,7 +15,10 @@ def print_stats():
 
 def am_i_dead():
     if (fullness < 0) or (health < 0) or (happiness < 0):
-        print(f'RIP {name}')
+        print(f'\nRIP {name}\n')
+        return False
+    else:
+        return True
 
 name = input('Hi! I\'m new. Please name me... ')
 
@@ -27,7 +30,6 @@ while running:
 
     if command == 'x':
         print('\nBye!\n')
-        running = False
         break
     elif command == 'f':
         fullness += 1
@@ -44,4 +46,4 @@ while running:
         
     print_stats()
 
-    am_i_dead()
+    running = am_i_dead()
