@@ -17,6 +17,8 @@ def am_i_dead():
     if (fullness < 0) or (health < 0) or (happiness < 0):
         print(f'RIP {name}')
 
+name = input('Hi! I\'m new. Please name me... ')
+
 print_stats()
 
 while running:
