@@ -37,14 +37,14 @@ while alive:
         print('\nBye!\n')
         break
     elif command == 'f':
-        fullness += 1
-        happiness += random.randint(0,3)/10
+        if fullness < max_stat: fullness += 1
+        if happiness < max_stat: happiness += random.randint(0,3)/10
     elif command == 'e':
-        health += 1
-        happiness += random.randint(0,20)/100 
+        if health < max_stat: health += 1
+        if happiness < max_stat: happiness += random.randint(0,20)/100 
         fullness -= random.randint(0,50)/100 
     elif command == 'p':
-        happiness += 1
+        if happiness < max_stat: happiness += 1
         fullness -= random.randint(0,25)/100
     else: # if invalid key pressed, decrease happiness
         happiness -= random.randint(0,5)
