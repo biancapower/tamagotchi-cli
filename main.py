@@ -1,6 +1,11 @@
 import random
+import time
 
-age = 0
+time_of_birth = time.time()
+
+def age():
+    return time.time() - time_of_birth
+
 alive = True
 
 # max allowed value for main stats
@@ -13,7 +18,7 @@ happiness = random.randint(1,10)
 
 # prints character stats
 def print_stats():
-    print(f'____________________\nName: {name}\nAge: {age}\nHunger: {round(max_stat - fullness)}\nHealth: {round(health)}\nHappiness: {round(happiness)}\n____________________')
+    print(f'____________________\nName: {name}\nAge: {age()}\nHunger: {round(max_stat - fullness)}\nHealth: {round(health)}\nHappiness: {round(happiness)}\n____________________')
 
 # determines whether character is dead and acts accordingly
 def am_i_dead():
