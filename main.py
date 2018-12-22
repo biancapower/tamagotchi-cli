@@ -4,21 +4,21 @@ import time
 time_of_birth = time.time()
 
 def age():
-    return time.time() - time_of_birth
+    return time.time() - time_of_birth   # TODO: deal with age in a more meaningful way (e.g. 1hr = 1 day)
 
 alive = True
 
 # max allowed value for main stats
 max_stat = 10
 
-# initial stats
+# initial stats # TODO: stats should degrade over time
 fullness = random.randint(1,10) 
 health = random.randint(1,10) 
 happiness = random.randint(1,10) 
 
 # prints character stats
 def print_stats():
-    print(f'____________________\nName: {name}\nAge: {age()}\nHunger: {round(max_stat - fullness)}\nHealth: {round(health)}\nHappiness: {round(happiness)}\n____________________')
+    print(f'____________________\nName: {name}\nAge: {age()}\nHunger: {round(max_stat - fullness)}\nHealth: {round(health)}\nHappiness: {round(happiness)}\n____________________')        # FIXME: hunger can currently display as -1 (should stop at 0)
 
 # determines whether character is dead and acts accordingly
 def am_i_dead():
